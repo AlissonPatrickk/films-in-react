@@ -12,4 +12,86 @@
     width: inherit;
     height: inherit;
     background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.featured-name {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.featured-info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.featured-points {
+    display: inline-block;
+    color: #46d369;
+    margin-right: 15px;
+}
+
+.featured-year {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured-seasons {
+    display: inline-block;
+} 
+
+.featured-description {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+
+}
+
+.featured-buttons {
+margin-top: 15px;
+
+}
+
+.button-watch{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #FFF;
+    color: #111;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+.button-list{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #333;
+    color: #FFF;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+.button-list:hover{
+    opacity: 0.7;
+}
+.button-watch:hover{
+    opacity: 0.7;
+}
+
+.featured-genres {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
 }
