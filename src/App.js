@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import endpoint from "./endpoint";
 import MovieRow from "./components/MovieRow/MovieRow";
 import MovieInto from "./components/HomeIntro/MovieInto"
+import Header from "./components/Header/Header";
 import './App.css';
 
 
 export default () => {
   const [movieList, setMovieList] = useState([]);
-  const [intoData, setIntoData] = useState(null)
+  const [intoData, setIntoData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false)
   useEffect(() => {
     const loadAll = async () => {
       let list = await endpoint.getHomeList();
@@ -22,8 +24,23 @@ export default () => {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scroll = () => {
+      if(window.scrollY > 10){
+        setBlackHeader(true)
+      } else {setBlackHeader(false)}
+    }
+    window.addEventListener('scroll', scroll)
+    return () => {
+      window.removeEventListener('scroll', scroll)
+    }
+  }, [])
+
   return (
     <div className="page">
+
+      <Header black={blackHeader} />
+
       {intoData &&
         <MovieInto item={intoData} />
       }
