@@ -10,10 +10,11 @@ export default ({black}) => {
                 </a>
             </div>
             <div className="header-user">
-            <a href="/">
+            <a href="https://docs.google.com/document/d/1EkZ1UYwHzKV4ocEYXgAA768QgEIRs40fv5R_015Mf4I/edit?usp=sharing">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="user" />
                 </a>
             </div>
+            
         </header>
     )
 }
